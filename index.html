@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>EEE PPQ Finder</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="navbar__container">
+                <a href="/" id="navbar__logo">Q Finder</a>
+                <ul class="navbar__menu">
+                    <div class="navbar__item">
+                        <div onclick="toggleDropdown('dropdownYear1')" class="navbar__links">Year 1</div>
+                        <div id="dropdownYear1" class="dropdown-content"> 
+                            <a href="ADC.html">ADC- ELEC40002</a>
+                            <a href="DECA.html">DECA- ELEC40003</a>
+                            <a href="Maths1A.hmtl">Maths 1A- ELEC40012</a>
+                            <a href="Maths1B.html">Maths 1B- ELEC40012</a>
+                        </div>
+                    </div>
+
+                    <div class="navbar__item">
+                        <div onclick="toggleDropdown('dropdownYear2')" class="navbar__links">Year 2</div>
+                        <div id="dropdownYear2" class="dropdown-content"> 
+                            <a href="/">Circuits and Systems- ELEC5001</a>
+                            <a href="/">Maths 2A- ELEC50011A</a>
+                            <a href="/">Maths 2B- ELEC50011B</a>
+                            <a href="/">Signals and Systems- ELEC50013</a>
+                            <a href="/">Communications- ELEC50002</a>
+                            <a href="/">Control Systems- ELEC50004</a>
+                            <a href="/">Power Electronics and Power Systems- ELEC50012</a>
+                            <a href="/">Electromagnetism- ELEC50007</a>
+                        </div>
+                    </div>
+
+                    <div class="navbar__item">
+                        <div onclick="toggleDropdown('dropdownYear3')" class="navbar__links">Year 3</div>
+                        <div id="dropdownYear3" class="dropdown-content"> 
+                            <a href="/">Default Link</a>
+                        </div>
+                    </div>
+
+                    <div class="navbar__item">
+                        <div onclick="toggleDropdown('dropdownYear4')" class="navbar__links">Year 4</div>
+                        <div id="dropdownYear4" class="dropdown-content"> 
+                            <a href="/">Default Link</a>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+        </nav>
+        <script>
+            function toggleDropdown(id) {
+                // Close all dropdowns first
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+
+                // Toggle the specific dropdown
+                document.getElementById(id).classList.toggle("show");
+            }
+
+            // Close the dropdown if the user clicks outside of it
+            window.onclick = function(event) {
+                if (!event.target.matches('.navbar__links')) {
+                    var dropdowns = document.getElementsByClassName("dropdown-content");
+                    for (var i = 0; i < dropdowns.length; i++) {
+                        var openDropdown = dropdowns[i];
+                        if (openDropdown.classList.contains('show')) {
+                            openDropdown.classList.remove('show');
+                        }
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>
+
+
+
+<!--
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <charset="UTF-8" />
+        <meta name="viewport"
+        content="width=device-width, initial-scale=1.0" />
+        <title> EEE PPQ Finder</title>
+        <link rel="stylesheet" href="styles.css" />
+
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="navbar__container">
+                <a href="/" id="navbar__logo">Q Finder</a>
+
+                <ul class="navbar__menu">
+                    <div class="navbar__item">
+                        <div onclick="myFunction()" class="navbar__links">Year 1</div>
+                        <div id="myDropdown" class="dropdown-content"> 
+                            <a href="/"> ADC- ELEC40002</a>
+                            <a href="/"> DECA- ELEC40003</a>
+                            <a href="/"> Maths 1A- ELEC40012</a>
+                            <a href="/"> Maths 1B- ELEC40012</a>
+                        </div>
+                    </div>
+
+                    <div class="navbar__item">
+                        <div onclick="myFunction()" class="navbar__links">Year 2</div>
+                        <div id="myDropdown" class="dropdown-content"> 
+                            <a href="/"> Circuits and Systems- ELEC5001</a>
+                            <a href="/"> Maths 2A- ELEC50011A</a>
+                            <a href="/"> Maths 2B- ELEC50011B</a>
+                            <a href="/"> Signals and Systems- ELEC50013</a>
+                            <a href="/"> Communications- ELEC50002</a>
+                            <a href="/"> Control Systems- ELEC50004</a>
+                            <a href="/"> Power Electronics and Power Systems- ELEC50012</a>
+                            <a href="/"> Electromagnetism- ELEC50007</a>
+                        </div>
+                    </div>
+
+                    <div class="navbar__item">
+                        <div onclick="myFunction()" class="navbar__links">Year 3</div>
+                        <div id="myDropdown" class="dropdown-content"> 
+                            <a href="/"> </a>
+                        </div>
+                    </div>
+
+                    <div class="navbar__item">
+                        <div onclick="myFunction()" class="navbar__links">Year 4</div>
+                        <div id="myDropdown" class="dropdown-content"> 
+                        <div class="dropdown menu"> 
+                            <a href="/"> </a>
+                        </div>
+                    </div>
+
+
+                </ul>
+            </div>
+        </nav>
+        <script src="app.js"></script>
+    </body>
+</html> 
+-->   
